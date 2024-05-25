@@ -13,8 +13,8 @@ services:  # 애플리케이션의 서비스 정의
       - 81:81
     # volumes:  # 볼륨 마운트
     #   - host_path:container_path
-    networks:  # 네트워크 설정
-      - rmcalc
+    # networks:  # 네트워크 설정
+    #   - rmcalc
     # depends_on:  # 의존하는 서비스
     #   - other_service
     restart: always  # 재시작 정책
@@ -27,8 +27,8 @@ services:  # 애플리케이션의 서비스 정의
   rmcalc-web:
     image: gillilo/rmcalc-web:latest
     container_name: rmcalc-web
-    networks:
-      - rmcalc
+    # networks:
+    #   - rmcalc
     depends_on:
       - rmcalc-express
     environment:  # 환경 변수 설정
