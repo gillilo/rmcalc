@@ -9,8 +9,8 @@ services:  # 애플리케이션의 서비스 정의
     container_name: rmcalc-express  # 컨테이너 이름
     # environment:  # 환경 변수 설정
     #   - VAR_NAME=value
-    # ports:  # 포트 매핑
-    #   - "host_port:container_port"
+    ports:  # 포트 매핑
+      - 81:81
     # volumes:  # 볼륨 마운트
     #   - host_path:container_path
     networks:  # 네트워크 설정
