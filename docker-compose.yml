@@ -14,7 +14,7 @@ services:
     depends_on:
       - rmcalc-express
     environment:
-      - RMCALC_EXPRESS_URL=https://rmc.rlaghlwns.com
+      - RMCALC_EXPRESS_URL=http://rmcalc-express:81
     ports:
       - 82:3000
     restart: on-failure
