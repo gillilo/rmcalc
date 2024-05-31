@@ -5,7 +5,7 @@ services:
     image: gillilo/rmcalc-express:latest
     container_name: rmcalc-express
     ports:
-      - 81:81
+      - 81:80
     restart: on-failure
 
   rmcalc-web:
@@ -14,7 +14,7 @@ services:
     depends_on:
       - rmcalc-express
     environment:
-      - RMCALC_EXPRESS_URL=http://rmcalc-express:81
+      - RMCALC_EXPRESS_URL=http://rmcalc-express
     ports:
       - 82:3000
     restart: on-failure
